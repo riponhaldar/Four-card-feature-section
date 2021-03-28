@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap');
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayisBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $VeryLightGray;
+  font-size: 15px;
+  min-height: 100vh;
+  padding-top: 70px;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+main {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    color: $GrayisBlue;
+    font-weight: 200;
+    span {
+      display: block;
+      font-weight: 600;
+      color: $VeryDarkBlue;
+    }
+  }
+  p {
+    max-width: calc(1440px / 2);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $GrayisBlue;
+    // padding: 0px 200px;
+  }
+  section {
+    article:nth-child(1) {
+      transform: translateY(50%);
+      border-top: 5px solid $Cyan;
+    }
+
+    article:nth-child(3) {
+      transform: translateY(50%);
+      border-top: 5px solid $Blue;
+    }
+    article:nth-child(4) {
+      border-top: 5px solid $Orange;
+    }
+    @media (max-width: 768px) {
+      article:nth-child(1) {
+        transform: translateY(0%);
+      }
+
+      article:nth-child(3) {
+        transform: translateY(0%);
+      }
+    }
+  }
+  article {
+    width: 25%;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    padding: 15px;
+    display: inline-block;
+    padding-right: 30px;
+    border-top: 5px solid $Red;
+    border-radius: 5px;
+    margin: 1rem;
+    box-shadow: 0px 10px 20px rgba($GrayisBlue, 0.4);
+    color: $GrayisBlue;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: $VeryDarkBlue;
+      margin-bottom: 5px;
+    }
+    img {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+    }
+  }
+}
+footer {
+  text-align: center;
+}
